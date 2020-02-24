@@ -1,0 +1,39 @@
+<div class="form-group row">
+  <label class="control-label col-sm-2">Categoría</label>
+  <select
+    class="custom-select custom-select-sm col-sm-10"
+    name=""
+    id=""
+    formControlName="categoria"
+    (change)="manejarCategoria($event)"
+  >
+    <option value="Noticias">Noticias</option>
+    <option value="Rumores">Rumores</option>
+    <option value="Camisetas">Camisetas</option>
+    <option value="Todos">Todos</option>
+  </select>
+</div>
+
+<div class="container-fluid row">
+  <div
+    class="card col-4 caja"
+    style="width: 33%;"
+    *ngFor="let post of arrTodosLosPost"
+  >
+    <div class="cajaImg">
+      <img class="card-img-top" [src]="post?.imagen" alt="Card image cap" />
+    </div>
+
+    <div class="card-body">
+      <h5 class="card-title">{{ post.titulo }}</h5>
+      <p class="card-text">
+        {{ post.texto }}
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ post.autor }}</li>
+      <li class="list-group-item">{{ post.categoria }}</li>
+      <li class="list-group-item">{{ post.fecha | date: "d-MMMM-yyy" }}</li>
+    </ul>
+  </div>
+</div>

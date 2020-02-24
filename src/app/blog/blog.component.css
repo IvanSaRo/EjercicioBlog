@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.card {
+  border: none;
+}
+.caja {
+  text-align: center;
+}
+
+.cajaImg {
+  overflow: hidden;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 10%;
+  border: 2px solid black;
+  margin: 1em auto;
+}
+
+.cajaImg img {
+  display: block;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+li {
+  border: 0;
+}
+
+.container-fluid div {
+}
+
+h5 {
+  color: blue;
+  margin: 1em 0;
+}
+
+li:first-child {
+  color: salmon;
+  margin: 0.5em 0;
+}
+
+li:nth-child(2) {
+  color: green;
+  margin-bottom: 0.5em;
+}
+
+p {
+  margin: 0 0.5em;
+}
